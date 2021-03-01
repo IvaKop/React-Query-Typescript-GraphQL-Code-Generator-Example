@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Query + Typescript + GraphQL Code Generator Example
 
 ## Available Scripts
 
@@ -28,6 +26,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn graphql:codegen`
+
+Generates Typescript types and custom React Query hooks for each `*.graphql` file.
 
 ### `yarn eject`
 
