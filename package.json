@@ -24,11 +24,13 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "start:codegen": "concurrently \"react-scripts start\" \"yarn graphql:codegen:watch\"",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
-        "graphql:codegen": "graphql-codegen --config codegen.yml"
+        "graphql:codegen": "graphql-codegen --config codegen.yml",
+        "graphql:codegen:watch": "nodemon --exec \"yarn graphql:codegen\" --ext .graphql --delay 5"
     },
     "husky": {
         "hooks": {
@@ -53,6 +55,8 @@
         "@graphql-codegen/typescript": "1.21.0",
         "@graphql-codegen/typescript-document-nodes": "1.17.9",
         "@graphql-codegen/typescript-operations": "1.17.14",
-        "@graphql-codegen/typescript-react-query": "^1.2.2"
+        "@graphql-codegen/typescript-react-query": "^1.2.2",
+        "concurrently": "^6.2.0",
+        "nodemon": "^2.0.12"
     }
 }
